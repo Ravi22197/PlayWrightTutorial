@@ -1,6 +1,7 @@
 const {test, expect} =require('@playwright/test')
 
 test.use({viewport:{width:1450,height:850}})
+// @ts-check
 test("valid login in", async function ({page}) {
     await page.goto("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login")
    console.log( await page.viewportSize().width)
@@ -16,5 +17,6 @@ test("valid login in", async function ({page}) {
    // await page.getByText("Logout").click()
    // await page.waitForTimeout(5000)
     await expect(page).toHaveURL(/login/)
+    
 
 })

@@ -15,7 +15,7 @@ class LoginPage {
         await this.page.fill( this.username ,'admin@email.com') // fill(this.username,usr)
         await this.page.fill(this.password , 'admin@123')       // fill(this.password,pass)
         await this.page.click(this.loginbutton)
-        await this.page.pause()
+       // await this.page.pause()
     }
     async verifySignIn() {
         await expect(this.page.locator(this.header)).toBeVisible()
